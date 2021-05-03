@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/i_note"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/notes_items_rv_bg"
+    android:layout_margin="8dp"
+    android:padding="8dp">
+
+
+        <ImageView
+            android:id="@+id/notes_icon_rv"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="25dp"
+            app:layout_constraintStart_toStartOf="@+id/notes_description_rv"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_baseline_event_note_24"
+            android:contentDescription="Notes Icon" />
+
+        <TextView
+            android:id="@+id/title_notes_rv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="25dp"
+            android:maxLength="10"
+            android:ellipsize="end"
+            android:maxEms="10"
+            android:maxLines="1"
+            android:singleLine="true"
+            app:layout_constraintBottom_toBottomOf="@+id/notes_icon_rv"
+            app:layout_constraintStart_toEndOf="@+id/notes_icon_rv"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            tools:text="It is a Title" />
+
+        <TextView
+            android:id="@+id/notes_date_rv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="14dp"
+            android:gravity="end"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/notes_icon_rv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="1-04-2021" />
+
+        <TextView
+            android:id="@+id/notes_description_rv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textSize="16sp"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp"
+            android:maxLength="50"
+            android:ellipsize="end"
+            app:layout_constraintEnd_toEndOf="@+id/notes_date_rv"
+            app:layout_constraintStart_toStartOf="@+id/notes_icon_rv"
+            app:layout_constraintTop_toBottomOf="@+id/notes_icon_rv"
+            tools:text="Tomorrow I will definitely go in for sports, for sure"
+            />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

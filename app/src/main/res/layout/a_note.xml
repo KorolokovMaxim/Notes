@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".NotesActivity">
+
+
+    <ImageView
+        android:id="@+id/a_note_back"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:background="?selectableItemBackgroundBorderless"
+        android:padding="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="?homeAsUpIndicator"
+        app:tint="?android:colorForeground" />
+
+
+    <ImageView
+        android:id="@+id/a_note_del"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_gravity="end"
+        android:layout_marginEnd="8dp"
+        android:background="?selectableItemBackgroundBorderless"
+        android:contentDescription="delete note button"
+        android:padding="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/a_note_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ic_delete"
+        app:tint="?android:colorForeground" />
+
+    <EditText
+        android:id="@+id/a_note_title"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:hint="Read your title"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/a_note_back" />
+
+    <EditText
+        android:id="@+id/a_note_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="top|left"
+        android:inputType="textMultiLine"
+        android:overScrollMode="always"
+        android:scrollbarStyle="insideInset"
+        android:scrollbars="vertical"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:scrollHorizontally="false"
+        android:lines="6"
+        android:hint="Read your Text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/a_note_title" />
+
+    <TextView
+        android:id="@+id/a_note_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="12-12-2021"
+        app:layout_constraintTop_toBottomOf="@+id/a_note_description"
+        tools:layout_editor_absoluteX="8dp"
+        android:layout_marginTop="12dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
